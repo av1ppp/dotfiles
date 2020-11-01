@@ -37,6 +37,6 @@ else
 	execute "git pull $VIM_VUNDLE_URL"
 fi
 log "Установка плагинов Vim"
-execute "vim +PluginInstall +qall"
+execute "vim -n +PluginInstall +qall"
 
 log "Конфигурация завершена"

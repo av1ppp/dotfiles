@@ -77,7 +77,7 @@ set smartindent                                 "умные отступы
 set shiftwidth=4                                "ширина отступи на нажатии >> и <<
 set background=dark				"оттенок фона
 set termguicolors                               "высококонстрастные цвета
-colorscheme gruvbox				"цветовая схема
+silent! colorscheme gruvbox						"цветовая схема
 set laststatus=2				"отображать всегда полосу состояния
 set langmap=ЁФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;~ABCDEFGHIJKLMNOPQRSTUVWXYZ\:,
             \ёфисвуапршолдьтщзйкыегмцчняж;`abcdefghijklmnopqrstuvwxyz\;
@@ -87,12 +87,15 @@ set nowritebackup
 set noswapfile
 
 "настройки gvim
-set guifont="Monospace Regular":h10	"шрифт
-set go-=T				"отключить инструменты
-set go-=m				"отключить меню
-set go-=r				"отключить полосу прокрутки
-set go-=d				"темная тема у рамки
-win 130 32				"задать высотку и ширину
+if has('gui')
+	set guifont="Monospace Regular":h10	"шрифт
+	set go-=T				"отключить инструменты
+	set go-=m				"отключить меню
+	set go-=r				"отключить полосу прокрутки
+	set go-=d				"темная тема у рамки
+	win 130 32				"задать высотку и ширину
+endif
+
 
 
 "-----------------------------------------> Airline <--

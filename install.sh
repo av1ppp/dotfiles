@@ -11,8 +11,8 @@ LOG=$DIR/install.log
 echo "" &> $LOG
 
 function log {
-	echo -e "[$(date +%T.%N)]\t$1" &>> $LOG
-	echo -e "[$(date +%T.%N)]\t$1"
+	echo -e "[$(date +%T.%N)] $1" &>> $LOG
+	echo -e "[$(date +%T.%N)] $1"
 }
 
 function execute {
@@ -38,5 +38,6 @@ else
 fi
 log "Установка плагинов Vim"
 execute "vim -n +PluginInstall +qall"
+log "Плагины Vim установлены. Для установки vim-go воспользуйтесь командой :GoInstallBinaries"
 
 log "Конфигурация завершена"

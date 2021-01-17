@@ -7,6 +7,8 @@ VIM=$DIR/vim
 VIM_VUNDLE_DIR=$HOME/.vim/bundle/Vundle.vim
 VIM_VUNDLE_URL=https://github.com/VundleVim/Vundle.vim.git
 
+I3=$DIR/i3
+
 LOG=$DIR/install.log
 echo "" &> $LOG
 
@@ -39,5 +41,8 @@ fi
 log "Установка плагинов Vim"
 execute "vim -n +PluginInstall +qall"
 log "Плагины Vim установлены. Для установки vim-go воспользуйтесь командой :GoInstallBinaries"
+
+log "Конфигурация i3"
+execute "cp $I3/config $HOME/.config/i3/"
 
 log "Конфигурация завершена"

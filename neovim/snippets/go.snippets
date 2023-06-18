@@ -1,0 +1,33 @@
+snippet if "if condition"
+	if $1 {
+		${2:${VISUAL}}
+	}
+
+snippet ie "if err not equal nil"
+	if err != nil {
+		${0:${VISUAL}}
+	}
+
+snippet re "return err"
+	return err
+
+snippet rne "return nil and err"
+	return nil, err
+
+snippet iere "if err not equal nil return nil"
+	if err != nil {
+		return err
+	}
+	
+snippet ierne "if err not equal nil return nil"
+	if err != nil {
+		return nil, err
+	}
+
+snippet wr
+	${1:w} http.ResponseWriter, ${2:r} *http.Request
+
+snippet fwr
+	func (${1:w} http.ResponseWriter, ${2:r} *http.Request) {
+		${0:${VISUAL}}
+	}

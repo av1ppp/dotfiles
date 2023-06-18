@@ -1,0 +1,16 @@
+snippet main
+	int main(int argc, char *argv[])
+	{
+		${0}
+	}
+snippet inc
+	#include <${1:stdio}.h>
+	$0
+snippet ndef
+	#ifndef $1
+	#define ${1:SYMBOL} ${2:value}
+	#endif /* ifndef $1 */
+snippet for
+	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+		${4}
+	}
